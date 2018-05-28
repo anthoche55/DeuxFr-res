@@ -1,4 +1,4 @@
-# DeuxFrres
+# DeuxFrères
 le bot officiel de la team les deux Frères
 
 
