@@ -566,9 +566,4 @@ bot.on("message", async message => {
 
 const broadcast = bot.createVoiceBroadcast();
 
-bot.on('guildMemberAdd', (guildMember, channel, message) => {
-    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "ew"));
-    });
-
-
 bot.login("NDQ5ODY2Njg3NzAyMTA2MTEz.Deq8aQ.KGzEWVE_83K2-9kLPGpP4esPad0")
