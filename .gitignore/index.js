@@ -5,7 +5,7 @@ const FileSync = require('lowdb/adapters/FileSync');
 const YoutubeDL = require('youtube-dl');
 const ytdl = require('ytdl-core');
 const fs = require("fs");
-const config = require("./config.json")
+const config = require(".gitignore/config.json")
 
 
 const adapter = new FileSync('database.json');
