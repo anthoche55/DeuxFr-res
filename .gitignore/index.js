@@ -834,7 +834,7 @@ bot.on("message", async (message) => {
 				.query({
 					part: 'snippet',
 					type: 'video',
-					maxResults: 1,
+					maxResults: 3,
 					q: query,
 					safeSearch: 'strict',
 					order: 'relevance',
