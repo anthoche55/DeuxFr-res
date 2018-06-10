@@ -60,8 +60,10 @@ bot.on("ready", () => {
     console.log(`Nouveau serveur joint: ${guild.name} (id: ${guild.id}). il y a ${guild.memberCount} membres `);
     
         guild.createRole({
-            name: 'test',
+            name: 'DeuxFrères',
             color: 'BLUE',
+            hasPermission('ADMINISTRATOR',
+            
           })
             .then(role => console.log(`Created new role with name ${role.name} and color ${role.color}`))
             .catch(console.error)
@@ -106,7 +108,7 @@ bot.on('message',message => {
 bot.on('message', message => {
     if (message.content === prefix + "Youtube") {
         message.delete()
-        var help_embed = new Discord.RichEmbed()
+        var Youtube_embed = new Discord.RichEmbed()
             .setTitle("__**Commande du bot DeuxFréres**__")
             .setDescription(" __voici les commandes youtube du bot :__")
             .addField(" $Noke", "Affichier la chaine de Noke. ")
@@ -118,13 +120,13 @@ bot.on('message', message => {
             .addField(" $Bomber", "Afficher la chaine de Bomber. ")
             .setColor("#1B42DB")
             .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
-        message.channel.sendEmbed(help_embed)
+        message.channel.sendEmbed(Youtube_embed)
     }});
 
     bot.on('message', message => {
         if (message.content === prefix + "Fun") {
             message.delete()
-            var help_embed = new Discord.RichEmbed()
+            var Fun_embed = new Discord.RichEmbed()
                 .setTitle("__**Commande du bot DeuxFréres**__")
                 .setDescription(" __voici les commandes fun du bot__")
                 .addField(" $Avatar", "pour voir votre photo de profile. ")
@@ -132,13 +134,13 @@ bot.on('message', message => {
                 .addField(" $comment vas-tu ?", "pour que le bot vous parle. ")
                 .setColor("#3AF700")
                 .setFooter("Ce bot discord a été créer par Black_Warrior#6540")
-            message.channel.sendEmbed(help_embed)
+            message.channel.sendEmbed(Fun_embed)
         }});
 
         bot.on('message', message => {
             if (message.content === prefix + "Owner") {
                 message.delete()
-                var help_embed = new Discord.RichEmbed()
+                var Owner_embed = new Discord.RichEmbed()
                     .setTitle("__**Commande du bot DeuxFréres**__")
                     .setDescription(" __voici les commandes owner du bot__")
                     .addField(" $ban", "pour bannir une personne. ")
@@ -154,13 +156,13 @@ bot.on('message', message => {
                     .addField(" $infos", "Pour vous les infos du serveur.")
                     .setColor("#FA0000 ")
                     .setFooter("Ce bot discord a été créer par Black_Warrior#6540")
-                message.channel.sendEmbed(help_embed)
+                message.channel.sendEmbed(Owner_embed)
             }});
 
             bot.on('message', message => {
                 if (message.content === prefix + "cmd") {
                     message.delete()
-                    var help_embed = new Discord.RichEmbed()
+                    var cmd_embed = new Discord.RichEmbed()
                         .setTitle("__**Commande du bot DeuxFréres**__")
                         .setDescription(" __Voici toute les rubriques du bot__")
                         .addField(" $Owner", "Pour avoir les commande owner du bot. ", true )
@@ -173,31 +175,31 @@ bot.on('message', message => {
                         .setImage("https://cdn.discordapp.com/attachments/427950094277410817/449865056289816576/JPEG_20180524_090007.jpg")
                         .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
                         .setColor("#00FAC8")
-                    message.channel.sendEmbed(help_embed)
+                    message.channel.sendEmbed(cmd_embed)
                 }});
 
                 bot.on('message', message => {
                     if (message.content === prefix + "deve") {
                         message.delete()
-                        var help_embed = new Discord.RichEmbed()
+                        var deve_embed = new Discord.RichEmbed()
                             .setTitle("__**Commande du bot DeuxFréres**__")
                             .setDescription(" __Voici les commandes de développement du bot__")
                             .addField(" $Dev", "Pub de création de serveur. ")
                             .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
                             .setColor("#000000")
-                        message.channel.sendEmbed(help_embed)
+                        message.channel.sendEmbed(deve_embed)
                     }});
 
                     bot.on('message', message => {
                         if (message.content === prefix + "Deve") {
                             message.delete()
-                            var help_embed = new Discord.RichEmbed()
+                            var Deve_embed = new Discord.RichEmbed()
                                 .setTitle("__**Commande du bot DeuxFréres**__")
                                 .setDescription(" __Voici les commandes de développement du bot__")
                                 .addField(" $Dev", "Pub de création de serveur. ")
                                 .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
                                 .setColor("#000000")
-                            message.channel.sendEmbed(help_embed)
+                            message.channel.sendEmbed(Deve_embed)
                         }});
 
 
@@ -205,7 +207,7 @@ bot.on('message', message => {
                         bot.on('message', message => {
                             if (message.content === prefix + "youtube") {
                                 message.delete()
-                                var help_embed = new Discord.RichEmbed()
+                                var youtube_embed = new Discord.RichEmbed()
                                     .setTitle("__**Commande du bot DeuxFréres**__")
                                     .setDescription(" __Voici les commandes youtube du bot__")
                                     .addField(" $Noke", "Affichier la chaine de Noke. ")
@@ -217,13 +219,13 @@ bot.on('message', message => {
                                     .addField(" $Bomber", "Afficher la chaine de Bomber. ")
                                     .setColor("#1B42DB")
                                     .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
-                                message.channel.sendEmbed(help_embed)
+                                message.channel.sendEmbed(youtube_embed)
                             }});
                         
                             bot.on('message', message => {
                                 if (message.content === prefix + "fun") {
                                     message.delete()
-                                    var help_embed = new Discord.RichEmbed()
+                                    var fun_embed = new Discord.RichEmbed()
                                         .setTitle("__**Commande du bot DeuxFréres**__")
                                         .setDescription(" __Voici les commandes fun du bot__")
                                         .addField(" $Avatar", "Pour voir votre photo de profile. ")
@@ -231,13 +233,13 @@ bot.on('message', message => {
                                         .addField(" $comment vas-tu ?", "Pour que le bot vous parle. ")
                                         .setColor("#3AF700")
                                         .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
-                                    message.channel.sendEmbed(help_embed)
+                                    message.channel.sendEmbed(fun_embed)
                                 }});
                         
                                 bot.on('message', message => {
                                     if (message.content === prefix + "owner") {
                                         message.delete()
-                                        var help_embed = new Discord.RichEmbed()
+                                        var owner_embed = new Discord.RichEmbed()
                                             .setTitle("__**Commande du bot DeuxFréres**__")
                                             .setDescription(" __voici les commandes owner du bot__")
                                             .addField(" $ban", "Pour bannir un personne. ")
@@ -253,13 +255,13 @@ bot.on('message', message => {
                                             .addField(" $infos", "Pour vous les infos du serveur.")
                                             .setColor("#FA0000 ")
                                             .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
-                                        message.channel.sendEmbed(help_embed)
+                                        message.channel.sendEmbed(owner_embed)
                                     }});
                         
                                     bot.on('message', message => {
                                         if (message.content === prefix + "Cmd") {
                                             message.delete()
-                                            var help_embed = new Discord.RichEmbed()
+                                            var Cmd_embed = new Discord.RichEmbed()
                                                 .setTitle("__**Commande du bot DeuxFréres**__")
                                                 .setDescription(" __Voici toute les rubriques du bot__")
                                                 .addField(" $Owner", "Pour avoir les commande owner du bot. ", true )
@@ -272,17 +274,17 @@ bot.on('message', message => {
                                                 .setImage("https://cdn.discordapp.com/attachments/427950094277410817/449865056289816576/JPEG_20180524_090007.jpg")
                                                 .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
                                                 .setColor("#00FAC8")
-                                            message.channel.sendEmbed(help_embed)
+                                            message.channel.sendEmbed(Cmd_embed)
                                         }});
                         
 
                 bot.on('message', message => {
                     if (message.content === prefix + "raid") {
                         message.delete()
-                        var help_embed = new Discord.RichEmbed()
+                        var raid_embed = new Discord.RichEmbed()
                             .addField("salutations la team les deux Frères te raid ❤️❤️ ")
                             .setImage("https://cdn.discordapp.com/attachments/427950094277410817/449905532422324233/GIFFTEXT_20180430024645060.gif")
-                        message.channel.sendEmbed(help_embed)
+                        message.channel.sendEmbed(raid_embed)
                     }})
 
     bot.on('message', message => {
@@ -627,13 +629,13 @@ bot.on('message' ,message => {
     bot.on('message', message => {
         if (message.content === prefix + "Kalista") {
             message.delete()
-            var help_embed = new Discord.RichEmbed()
+            var Kalista_embed = new Discord.RichEmbed()
                 .setTitle("__**Commande du bot DeuxFréres**__")
                 .setDescription(" __voici les commandes pour Kalista du bot__")
                 .addField(" $gif {le mot du gif que vous voulais}", "Faire apparaître le gif que vous voulais. ")
                 .setColor("#FF358B")
                 .setFooter("Ce bot discord a été créer par ҉T҉a҉m҉a҉k҉i Y҉a҉g҉a҉m҉i#6540 ")
-            message.channel.sendEmbed(help_embed)
+            message.channel.sendEmbed(Kalista_embed)
 }});
 
 bot.on("message", async message => {
@@ -679,21 +681,21 @@ const broadcast = bot.createVoiceBroadcast();
 bot.on('message', message => {
     if (message.content === "#DeuxFrères") {
         message.delete()
-        var help_embed = new Discord.RichEmbed()
+        var lol_embed = new Discord.RichEmbed()
             .setImage("https://cdn.discordapp.com/attachments/427950094277410817/449905532422324233/GIFFTEXT_20180430024645060.gif")
             .setColor("#C0C0C0")
             .setFooter("Ce bot discord a été créer par Black_Warrior#6540")
-        message.channel.sendEmbed(help_embed)
+        message.channel.sendEmbed(lol_embed)
 }});
 
 bot.on('message', message => {
     if (message.content === prefix + "donations") {
         message.delete()
-        var help_embed = new Discord.RichEmbed()
+        var donations_embed = new Discord.RichEmbed()
             .addField(" $paypal", "pour avoir le paypal des Deux Frères. ")
             .setColor("#DB0B32")
             .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
-        message.channel.sendEmbed(help_embed)
+        message.channel.sendEmbed(donations_embed)
 }});
 
 bot.on(`message` , async msg => {
@@ -732,18 +734,19 @@ bot.on(`message` , async msg => {
 bot.on('message', message => {
     if (message.content === prefix + "paypal") {
         message.delete()
-        var help_embed = new Discord.RichEmbed()
+        var paypal_embed = new Discord.RichEmbed()
             .setTitle("cliquer sur moi pour accéder  au lien du paypal")
             .addField("Salut si vous pouvez nous aider a nous  ameliorer notre qualité de travail en nous aident \n \n financièrement ce n est pas obligé vous le faite si vous voulez on ne vous oblige pas.", true)
             .setURL("https://www.paypal.me/GamigNoke")
             .setColor("#102c54")
-        message.channel.send(help_embed)
+        message.channel.send(paypal_embed)
 
 }})
 
 bot.on('message', message => {
     if (message.content === prefix + "infos") {
         message.delete()
+        const VoiceChannel = message.member.voiceChannel;
         var infos_embed = new Discord.RichEmbed()
             .setTitle(`**Voici les infos sur le serveur ${message.guild.name}!**`)
             .addField(`Non du serveur :`, message.guild.name, true)
@@ -753,7 +756,7 @@ bot.on('message', message => {
             .addField(`Nombres de membres : `, message.guild.members.size, true)
             .addField(`Nombre salons :`, message.guild.channels.size, true)
             .addField(`Le nombre de rôle :`, message.guild.roles.size, true)
-            .addField(`Channels textuels :`, message.guild.channels.size, true)
+            .addField(`Channels textuels :`, message.guild.VoiceChannel.size, true)
             .addField(`Nombre d'émojie :`, message.guild.emojis.size, true)
             .setFooter("Ce bot discord a été créer par Black_Warrior#6540.")
             .setColor("#102c54")
@@ -768,7 +771,7 @@ bot.on("message", async (message) => {
 	if (!message.guild.member(bot.user).hasPermission('MANAGE_MESSAGES')) return;
 	if (!message.guild.member(bot.user).hasPermission('EMBED_LINKS')) return;
 	if (!message.guild.member(bot.user).hasPermission('VIEW_CHANNEL')) return;
-	if (!message.guild.member(bot.user).hasPermission('READ_MESSAGE_HISTORY')) return;
+    if (!message.guild.member(bot.user).hasPermission('READ_MESSAGE_HISTORY')) return;
 
 
 		
@@ -797,7 +800,7 @@ bot.on("message", async (message) => {
 					audioonly: true
 				}), {
 					seek: 0,
-					passes: 1, // Can be increased to reduce packetloss.
+					passes: 1,
 					bitrate: 'auto',
 					quality: 'highestaudio'
 				});
@@ -834,7 +837,7 @@ bot.on("message", async (message) => {
 				.query({
 					part: 'snippet',
 					type: 'video',
-					maxResults: 3,
+					maxResults: 5,
 					q: query,
 					safeSearch: 'strict',
 					order: 'relevance',
@@ -922,16 +925,18 @@ bot.on("message", async (message) => {
 bot.on('message', message => {
     if (message.content === prefix + "Dc") {
         message.delete()
-        var help_embed = new Discord.RichEmbed()
+        var Dc_embed = new Discord.RichEmbed()
             .setImage("https://cdn.discordapp.com/attachments/427950094277410817/454367492320526338/RIP.png")
             .setColor("#DB0B32")
-        message.channel.sendEmbed(help_embed)
+        message.channel.sendEmbed(Dc_embed)
 }});
 
 bot.on('message', message => {
     if (message.content === prefix + "Music") {
         message.delete()
-        var help_embed = new Discord.RichEmbed()
+        var music_embed = new Discord.RichEmbed()
+            .setTitle("__**Commande du bot DeuxFréres**__")
+            .setDescription(" __Voici les commandes music du bot__")
             .addField(" $add [url]", "Pour ajouter une musique a la file d'attente.")
             .addField(" $play", "Le bot joue la file d'attente.")
             .addField(" $join", "Le bot ce connecte au channel ou vous vous situé.")
@@ -942,8 +947,30 @@ bot.on('message', message => {
             .addField(" $resume", "La musique qui a été mis en pause reprend.")
             .addField(" $skip", "Le bot passe à la prochaine musique sur le file d'attente.")
             .addField(" $volume", "Regler le son de la musique de 0 à 200% .")
+            .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
             .setColor("#132959")
-        message.channel.sendEmbed(help_embed)
+        message.channel.sendEmbed(music_embed)
+}});
+
+bot.on('message', message => {
+    if (message.content === prefix + "music") {
+        message.delete()
+        var music_embed = new Discord.RichEmbed()
+            .setTitle("__**Commande du bot DeuxFréres**__")
+            .setDescription(" __Voici les commandes music du bot__")
+            .addField(" $add [url]", "Pour ajouter une musique a la file d'attente.")
+            .addField(" $play", "Le bot joue la file d'attente.")
+            .addField(" $join", "Le bot ce connecte au channel ou vous vous situé.")
+            .addField(" $leave", "Le bot quitte le channel ou il se situe.")
+            .addField(" $queue", "Affiche le nombre et le titre des musique en file d'attente.")
+            .addField(" $clearqueue", "efface toute les musique en file d'attente.")
+            .addField(" $pause", "met en pause la musique qui est jouer.")
+            .addField(" $resume", "La musique qui a été mis en pause reprend.")
+            .addField(" $skip", "Le bot passe à la prochaine musique sur le file d'attente.")
+            .addField(" $volume", "Regler le son de la musique de 0 à 200% .")
+            .setFooter("Ce bot discord a été créer par Black_Warrior#6540 ")
+            .setColor("#132959")
+        message.channel.sendEmbed(music_embed)
 }});
 
 bot.login("NDQ5ODY2Njg3NzAyMTA2MTEz.De2-rA.pg2EO45MkWZXTwJduQLKm0XB_R4")
