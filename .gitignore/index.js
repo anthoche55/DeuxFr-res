@@ -62,8 +62,6 @@ bot.on("ready", () => {
         guild.createRole({
             name: 'DeuxFrères',
             color: 'BLUE',
-            hasPermission('ADMINISTRATOR',
-            
           })
             .then(role => console.log(`Created new role with name ${role.name} and color ${role.color}`))
             .catch(console.error)
