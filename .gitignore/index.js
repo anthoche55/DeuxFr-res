@@ -971,4 +971,4 @@ bot.on('message', message => {
         message.channel.sendEmbed(music_embed)
 }});
 
-bot.login("NDQ5ODY2Njg3NzAyMTA2MTEz.De2-rA.pg2EO45MkWZXTwJduQLKm0XB_R4")
+bot.login(config)
